@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 
 interface HeaderProps {
-    image: {src: string, alt: string},
+    image?: {src: string, alt: string},
     children: ReactNode
 }
 
