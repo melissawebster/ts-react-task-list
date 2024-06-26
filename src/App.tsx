@@ -1,15 +1,12 @@
-import './App.css'
+import './index.css'
 import CourseGoal from './components/CourseGoal'
 import Header from './components/Header'
 
 function App() {
 
   return (
-    <main>
-      <Header 
-      >
-        <h2>Your tasks</h2>
-      </Header>
+    <main className='container flex flex-col gap-10'>
+      <Header />
       <CourseGoal
         title="First task"
         description="Task description"  

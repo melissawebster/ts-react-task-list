@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
 }
@@ -14,28 +18,38 @@ body {
 }
 
 main {
-  width: 90%;
-  max-width: 60vw;
-  margin: 1.5rem auto;
   padding: 2rem;
-  background-color: #1c1f26;
+  background-image: linear-gradient(#1d2026, #242731, #1d2026);
   color: #FFF;
   border-width: 1px;
   border-image: linear-gradient(90deg, #c70ffe, #7e53fb, #0be7fa) 1;
   border-style: solid;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-main:hover {
-  border-image: linear-gradient(90deg, #0be7fa, #7e53fb, #c70ffe) 1;
-  background-color: #1e2128;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  justify-content: center;
-  align-items: center;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+
